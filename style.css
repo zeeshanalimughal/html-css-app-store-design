@@ -1,0 +1,220 @@
+* {
+    margin     : 0;
+    padding    : 0;
+    box-sizing : border-box;
+    font-family: sans-serif;
+}
+
+header {
+    min-height      : 150px;
+    background-color: #191919;
+    display         : flex;
+    align-items     : flex-end;
+    padding         : 0 7rem;
+}
+
+header nav {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+header nav ul {
+    display   : flex;
+    list-style: none;
+
+}
+
+header nav ul li:not(li:last-child) {
+    margin-right: 2rem;
+}
+
+header nav ul li {
+    display       : flex;
+    list-style    : none;
+    padding-bottom: 12px;
+    border-bottom : 4px solid transparent;
+}
+
+header nav ul li:hover {
+    border-bottom: 4px solid #44D9CE;
+}
+
+header nav ul li:hover a {
+    color: #44D9CE;
+}
+
+
+header nav ul li.active {
+    border-bottom: 4px solid #44D9CE;
+}
+
+header nav ul li.active a {
+    color: #44D9CE;
+}
+
+
+header nav ul li a {
+    color          : rgb(197, 197, 197);
+    font-size      : 20px;
+    text-decoration: none;
+    font-weight    : 100;
+}
+
+.icon {
+    color    : rgb(197, 197, 197);
+    cursor   : pointer;
+    font-size: 2rem;
+}
+
+main {
+    padding         : 3rem 7rem;
+    background-color: #292929;
+    width           : 100%;
+    min-height      : calc(100vh - 150px);
+}
+
+main .heading {
+    font-size  : 2.2rem;
+    color      : #fff;
+    font-weight: 400;
+}
+
+main .subheading {
+    font-size  : 1.2rem;
+    color      : #eee;
+    font-weight: 200;
+}
+
+
+main .apps__container {
+    margin-top         : 2rem;
+    width              : 100%;
+    background-color   : transparent;
+    display            : flex;
+    /* justify-content : space-between; */
+    flex-wrap          : wrap;
+    align-content      : flex-start;
+    gap                : 2rem;
+
+}
+
+main .card {
+    /* max-width       : 440px; */
+    width           : 30%;
+    background-color: #292929;
+    padding         : 1.5rem;
+    box-shadow      : 0 0 30px rgba(0, 0, 0, .6);
+    display         : flex;
+    column-gap      : 2rem;
+    align-items     : center;
+    border-radius   : 20px;
+    flex-grow       : 1;
+
+}
+
+main .card:hover .card__image img {
+    transform: scale(1.2);
+}
+
+main .card .card__image {
+    width        : 140px;
+    height       : 140px;
+    position     : relative;
+    border-radius: 10px;
+    overflow     : hidden;
+}
+
+main .card .card__image img {
+    position  : absolute;
+    top       : 0;
+    left      : 0;
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+    transition: all .5s;
+}
+
+.card .card__content .card__title {
+    font-size    : 1.3rem;
+    color        : #fff;
+    margin-bottom: 6px;
+}
+
+.card .card__content .card__subtitle {
+    font-size    : .9rem;
+    color        : rgb(199, 199, 199);
+    margin-bottom: 6px;
+}
+
+.card .card__content .card__rating {
+    margin: .6rem 0;
+}
+
+.card .card__content .card__rating ion-icon {
+    font-size: 1.4rem;
+    color    : #ff1;
+}
+
+.card .card__content .card__button {
+    border          : none;
+    outline         : none;
+    width           : 140px;
+    height          : 35px;
+    border-radius   : 8px;
+    background-color: #191919;
+    color           : #fff;
+    text-transform  : uppercase;
+    border-bottom   : 3px solid #44DACF;
+    cursor          : pointer;
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:1257px) {
+    header {
+        padding: 0 1.5rem;
+
+    }
+
+    main {
+        padding: 2rem 1.5rem !important;
+
+    }
+
+
+
+    main .card {
+        width: 30%;
+    }
+
+}
+
+@media (max-width:1217px) {
+
+    main .card {
+        width: 48%;
+    }
+}
+
+@media (max-width:885px) {
+    main .card .card__image {
+        width : 130px;
+        height: 130px;
+    }
+
+    main .card {
+        max-width: 100%;
+        width    : 100%;
+    }
+}
